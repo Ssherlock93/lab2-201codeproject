@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Was I born abroad?
 var questionOne = prompt('Was I born abroad? (Y/N)');
