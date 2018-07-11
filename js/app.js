@@ -1,12 +1,14 @@
 'use strict';
+
+//adding a score
+var scoreCard = 0;
 //introduction
 alert('Hi, my name is Trevor Stam. This guessing game reveals something about my background. Answer the questions with Y/y for yes and N/n for no. ');
 var nameAnswer = prompt('What\'s your name?');
 console.log('userName', nameAnswer);
 alert('Welcome '+ nameAnswer + 'let\'s start the guessing game!');
 
-//adding a score
-var scoreCard = 0;
+
 
 // Was I born abroad?
 var answerOne = prompt('Was I born abroad? (Y/N)');
@@ -72,4 +74,12 @@ if (answerFive.toUpperCase() === 'Y') {
 
 //What is my favorite number?
 //User has 4 guesses.
+var faveNumber = 1910;
+
+
+
+
+
+//tally of total score
+alert('Your total score is' + scoreCard + ' out of 7');
 
