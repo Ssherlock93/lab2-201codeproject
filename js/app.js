@@ -74,7 +74,38 @@ if (answerFive.toUpperCase() === 'Y') {
 
 //What is my favorite number?
 //User has 4 guesses.
-var faveNumber = 1910;
+var faveNumber = 10;//favenumber
+var attempts = 4; // number of guesses
+
+
+
+while (attempts > 0) {
+var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
+  if (parseInt(userGuess) < faveNumber) {
+    alert('go HIGHER! you have used '+ (5 - attempts) + ' attempt');
+    attempts --;
+  } else if (parseInt(userGuess) > faveNumber){
+    alert('go lower you have used ' + (5 - attempts) + ' attempt');
+    attempts --;
+  } else{
+    alert('Thats correct! '+ faveNumber + 'is my favorite number');
+    scoreCard ++;
+    break;
+
+  }
+
+}
+
+// As a developer, I want to add a seventh question to my guessing game that has multiple 
+// possible correct answers that are stored in an array.For instance, 
+// "Can you guess a state that I have lived in besides Washington?", 
+// so that even more of my programming skills are showcased.
+// For now, I will structure this question so that the user has six tries to get a single correct answer, 
+// and upon using up those tries OR getting a correct answer, displays a message to the user indicating 
+// all of the possible correct answers.
+
+
+
 
 
 
