@@ -1,5 +1,6 @@
 'use strict';
-
+//introduction
+alert('Hi, my name is Trevor Stam. This guessing game reveals something about my background. Answer the questions with Y/y for yes and N/n for no. ')
 // Was I born abroad?
 var questionOne = prompt('Was I born abroad? (Y/N)');
 console.log('Was I born abroad?', questionOne);
