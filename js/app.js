@@ -84,7 +84,7 @@ var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
   if (parseInt(userGuess) < faveNumber) {
     alert('go HIGHER! you have used '+ (5 - attempts) + ' attempt');
     attempts --;
-  } else if (parseInt(userGuess) > faveNumber){
+  } else if (parseInt(userGuess) > faveNumber){s
     alert('go lower you have used ' + (5 - attempts) + ' attempt');
     attempts --;
   } else{
@@ -104,9 +104,44 @@ var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
 // and upon using up those tries OR getting a correct answer, displays a message to the user indicating 
 // all of the possible correct answers.
 
+var places = ['California', 'Switzerland', 'United Kingdom', 'Holland'];
+var userTry = 0;
+var rightPlace = [];
+var correctPlaceGuess = false;
+
+while (userTry < 6){
+  var placeGuess = prompt('Guess the places that I have lived in?');
+  for (var i = 0; i < places.length; i++ ) {
+    
+    if (places[i] === placeGuess){
+      alert('That\'s correct. I\'ve lived there');
+      rightPlace.push(placeGuess);
+      correctPlaceGuess = true;
+      break;
+
+    }
+  }
+  
+  userTry ++;
+  if (correctPlaceGuess === true) {
+    break;
+  } else {
+    alert('That\'s not correct');
+  }   
+}
 
 
 
+
+
+// for (var i = 0; i < places.length; i++) {
+  
+// } if (placeGuess == false) {
+//   alert('That is wrong. You\'ve used' + (7 - userTry) + ' tries');
+//   userTry --;
+// } else {
+//   alert('well done. You\'ve correctly guessed....');
+// }
 
 
 
