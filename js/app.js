@@ -6,7 +6,7 @@ var scoreCard = 0;
 alert('Hi, my name is Trevor Stam. This guessing game reveals something about my background. Answer the questions with Y/y for yes and N/n for no. ');
 var nameAnswer = prompt('What\'s your name?');
 console.log('userName', nameAnswer);
-alert('Welcome '+ nameAnswer + 'let\'s start the guessing game!');
+alert('Welcome '+ nameAnswer + ' let\'s start the guessing game!');
 
 
 
@@ -80,15 +80,17 @@ var attempts = 4; // number of guesses
 
 
 while (attempts > 0) {
-var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
+  var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
+  console.log('number guess: ', userGuess);
   if (parseInt(userGuess) < faveNumber) {
     alert('go HIGHER! you have used '+ (5 - attempts) + ' attempt');
     attempts --;
-  } else if (parseInt(userGuess) > faveNumber){s
+  } else if (parseInt(userGuess) > faveNumber){
     alert('go lower you have used ' + (5 - attempts) + ' attempt');
     attempts --;
   } else{
     alert('Thats correct! '+ faveNumber + 'is my favorite number');
+    console.log('Correct');
     scoreCard ++;
     break;
 
@@ -96,56 +98,45 @@ var userGuess = prompt('guess the correct number between 0 and 20 in 4 tries');
 
 }
 
-// As a developer, I want to add a seventh question to my guessing game that has multiple 
-// possible correct answers that are stored in an array.For instance, 
-// "Can you guess a state that I have lived in besides Washington?", 
+// As a developer, I want to add a seventh question to my guessing game that has multiple
+// possible correct answers that are stored in an array.For instance,
+// "Can you guess a state that I have lived in besides Washington?",
 // so that even more of my programming skills are showcased.
-// For now, I will structure this question so that the user has six tries to get a single correct answer, 
-// and upon using up those tries OR getting a correct answer, displays a message to the user indicating 
+// For now, I will structure this question so that the user has six tries to get a single correct answer,
+// and upon using up those tries OR getting a correct answer, displays a message to the user indicating
 // all of the possible correct answers.
 
-var places = ['California', 'Switzerland', 'United Kingdom', 'Holland'];
-var userTry = 0;
-var rightPlace = [];
-var correctPlaceGuess = false;
+var places = ['California', 'Switzerland', 'United Kingdom', 'Holland'];//places lived in
+var userTry = 0; //number of guesses by user
+var rightPlace = [];//empty array. When place is correctly guessed, it gets pushed into empty array
+var correctPlaceGuess = false; //
 
 while (userTry < 6){
   var placeGuess = prompt('Guess the places that I have lived in?');
+  console.log('placeGuess: ', placeGuess);
   for (var i = 0; i < places.length; i++ ) {
-    
+
     if (places[i] === placeGuess){
       alert('That\'s correct. I\'ve lived there');
+      console.log('placeGuess: ', placeGuess);
       rightPlace.push(placeGuess);
       correctPlaceGuess = true;
+      scoreCard ++;
       break;
 
     }
   }
-  
+
   userTry ++;
   if (correctPlaceGuess === true) {
     break;
   } else {
     alert('That\'s not correct');
-  }   
+  }
 }
 
 
-
-
-
-// for (var i = 0; i < places.length; i++) {
-  
-// } if (placeGuess == false) {
-//   alert('That is wrong. You\'ve used' + (7 - userTry) + ' tries');
-//   userTry --;
-// } else {
-//   alert('well done. You\'ve correctly guessed....');
-// }
-
-
-
-
 //tally of total score
-alert('Your total score is' + scoreCard + ' out of 7');
+alert('Hey '+ nameAnswer + 'Your total score is' + scoreCard + ' out of 7');
+console.log(nameAnswer + ': ' + scoreCard);
 
