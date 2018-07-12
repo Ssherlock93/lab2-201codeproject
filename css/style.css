@@ -17,5 +17,28 @@ h5 {
 
 body {
     background-color: blanchedalmond;
+    margin: 20px;
 }
 
+#introduction {
+    width: 680px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(39, 146, 146);
+    padding: 10px;
+    position: relative;
+}
+
+#biography {
+    width: 660px;
+    border: 2px solid slateblue;
+    padding: 20px;
+    position: relative;
+}
+
+#topten {
+    width: 660px;
+    border: 2px solid cyan;
+    padding: 25px;
+    position: relative;
+}
